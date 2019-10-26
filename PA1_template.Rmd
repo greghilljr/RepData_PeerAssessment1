@@ -32,7 +32,7 @@ print(dsub)
 ```
 
 #### 2. Make a histogram of the total number of steps taken each day
-```{r, echo = TRUE, fig.align = "center"}
+```{r fig1, echo=TRUE, fig.align="center"}
 hist(dsub$steps,
      xlab = "Steps",
      main = "Histogram of Total Steps Per Day")
@@ -48,7 +48,7 @@ medianSteps <- prettyNum(round(median(dsub$steps)), big.mark = ",")
 
 ### What is the average daily activity pattern?
 #### 1. Make a time series plot of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all days
-```{r, echo = TRUE, fig.align = "center"}
+```{r fig2, echo=TRUE, fig.align="center"}
 dsub2 <- data  %>%
         group_by(interval) %>%
         summarise(
@@ -93,7 +93,7 @@ print(dsub3)
 
 #### 4. Make a histogram of the total number of steps taken each day and Calculate and report the mean and median total number of steps taken per day. Do these values differ from the estimates from the first part of the assignment? What is the impact of imputing missing data on the estimates of the total daily number of steps?
 
-```{r, echo = TRUE, fig.align = "center"}
+```{r fig3, echo=TRUE, fig.align="center"}
 dsub4 <- dsub3 %>%
         group_by(date) %>%
         summarise(steps = sum(steps))
@@ -129,7 +129,7 @@ print(dsub5)
 
 #### 2. Make a panel plot containing a time series plot (i.e. type="l") of the 5-minute interval (x-axis) and the average number of steps taken, averaged across all weekday days or weekend days (y-axis).
 
-```{r, echo = TRUE, fig.align = "center"}
+```{r fig4, echo=TRUE, fig.align="center"}
 # See the README file in the GitHub repository to see an example of what this plot should look like using simulated data.
 library(lattice)
 xyplot(steps ~ interval | dtype, data = dsub5, type = "l", layout = c(1, 2), xlab = "Interval", ylab = "Steps")

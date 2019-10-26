@@ -58,7 +58,7 @@ hist(dsub$steps,
      main = "Histogram of Total Steps Per Day")
 ```
 
-<img src="PA1_template_files/figure-html/unnamed-chunk-3-1.png" style="display: block; margin: auto;" />
+<img src="PA1_template_files/figure-html/fig1-1.png" style="display: block; margin: auto;" />
 
 #### 3. Calculate and report the mean and median of the total number of steps taken per day
 
@@ -81,7 +81,7 @@ dsub2 <- data  %>%
 dsub2 %>% plot(type = "l", xlab = "Interval", ylab = "Steps", main = "Average Daily Steps by 5-Minute Interval")
 ```
 
-<img src="PA1_template_files/figure-html/unnamed-chunk-5-1.png" style="display: block; margin: auto;" />
+<img src="PA1_template_files/figure-html/fig2-1.png" style="display: block; margin: auto;" />
 
 #### 2. Which 5-minute interval, on average across all the days in the dataset, contains the maximum number of steps?
 
@@ -150,7 +150,7 @@ hist(dsub4$steps,
      main = "Histogram of Total Steps Per Day")
 ```
 
-<img src="PA1_template_files/figure-html/unnamed-chunk-10-1.png" style="display: block; margin: auto;" />
+<img src="PA1_template_files/figure-html/fig3-1.png" style="display: block; margin: auto;" />
 
 
 ```r
@@ -205,4 +205,4 @@ library(lattice)
 xyplot(steps ~ interval | dtype, data = dsub5, type = "l", layout = c(1, 2), xlab = "Interval", ylab = "Steps")
 ```
 
-<img src="PA1_template_files/figure-html/unnamed-chunk-13-1.png" style="display: block; margin: auto;" />
+<img src="PA1_template_files/figure-html/fig4-1.png" style="display: block; margin: auto;" />
